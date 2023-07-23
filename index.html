@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif+Khitan+Small+Script&family=Poppins&display=swap"
         rel="stylesheet">
+    <script defer src="node_modules/swup/dist/Swup.umd.js"></script>
+    <script defer src="static/script.js"></script>
     <title>Meal Genius</title>
 
 </head>
@@ -20,15 +22,16 @@
         style="background-image: url('static/img/bg2.jpg');">
 
         <!--brown container-->
-        <div class="bg-[#161614] text-white h-[70%] w-[80%] overflow-y-scroll">
-
+        <div class="bg-[#161614] text-white absolute h-[70%] w-[80%] overflow-hidden">
+            <!-- overflow-y-scroll -->
 
             <!-- Navbar -->
             <div id="navbar"
                 class="sticky bg-[#161614] top-0 z-10 flex flex-row py-2 xl:gap-x-[39.688rem] lg:gap-x-[25.688rem] md:gap-x-[13.688rem]">
                 <div
                     class="font-brand xl:text-xl ml-[80px] lg:text-lg text-[rgba(222, 226, 230, 0.75)] md:ml-[3.75rem]">
-                    Meal&nbsp;Genius
+                    <a href="/index.html">Meal&nbsp;Genius</a>
+
                 </div>
 
                 <div>
@@ -36,77 +39,39 @@
                         class="mb-0 mr-[1.275rem] gap-[0.825rem] flex flex-row justify-center items-center font-menu md:mr-[1.75rem]">
                         <li class="text-[#f5f5dc] list-none text-lg"><a
                                 class="lg:px-[18px] lg:py-[3px] bg-[#161614] text-white block rounded-[20px] md: px-[12px] md: py-[2px]"
-                                href="/">Sign in</a></li>
+                                href="/signIn.html">Sign in</a></li>
                         <li class="text-[#f5f5dc] list-none text-lg"><a
                                 class="lg:px-[18px] lg:py-[3px] bg-[#161614] text-white block rounded-[20px] md: px-[12px] md: py-[2px]"
-                                href="/">Sign up</a></li>
+                                href="/signUp.html">Sign up</a></li>
                     </ul>
                 </div>
             </div>
             <!-- Navbar Ends  -->
 
-
-            <!-- Hero-Section Starts -->
-            <div class="container flex flex-row w-[100%] xl:h-[26.7rem] md:h-[29.8rem] md: mb-8">
-                <div class="w-[35%] h-full xl:py-24 xl:pl-14 lg:py-24 lg:pl-10 md:py-[3.5rem] md:pl-10 md: text-[2rem]">
-                    <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Your Premium</p>
-                    <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Guide To</p>
-                    <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Authentic Dining</p>
-                    <button
-                        class="shadow-lg shadow-gray-500/40 rounded-none py-2 px-4 border-2 mt-4 border-gray-300 font-menu md: text-[1.5rem] "><a
-                            href="#aboutUs">About Us</a></button>
+            <main id="swup" class="transition-fade">
+                <!-- Hero-Section Starts -->
+                <div class="container flex flex-row w-[100%] xl:h-[26.7rem] md:h-[29.8rem] md: mb-8">
+                    <div
+                        class="w-[35%] h-full xl:py-24 xl:pl-14 lg:py-24 lg:pl-10 md:py-[3.5rem] md:pl-10 md: text-[2rem]">
+                        <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Your Premium</p>
+                        <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Guide To</p>
+                        <p class="font-hero xl:text-4xl font-bold my-2  lg:text-3xl">Authentic Dining</p>
+                        <button id="aboutUsButton"
+                            class="shadow-lg shadow-gray-500/40 rounded-none py-2 px-4 border-2 mt-4 border-gray-300 font-menu md: text-[1.5rem] "><a
+                                href="/aboutUs.html">About Us</a></button>
+                    </div>
+                    <div class="w-[65%] h-full bg-cover bg-center relative">
+                        <img src="static/img/bg4.jpg" class="w-full h-full object-cover px-4 pb-4">
+                    </div>
                 </div>
-                <div class="w-[65%] h-full bg-cover bg-center relative">
-                    <img src="static/img/bg4.jpg" class="w-full h-full object-cover px-4 pb-4">
-                </div>
-            </div>
-            <!-- Hero-Section Ends -->
-
-
-            <!-- AboutUs-Section Starts -->
-            <div id="aboutUs"
-                class="container flex flex-row w-[80%] bg-white h-[19.375rem] xl:ml-[7rem] xl:mt-28 xl:mb-20 lg:mt-[6.4rem] lg:mb-28 lg:ml-[5.5rem]">
-                <div class="w-[40%] h-full bg-cover bg-center relative">
-                    <img src="static/img/bg4.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="w-[60%] h-full py-10 px-8 text-black">
-                    <p class="font-brand text-xl text-[#808080]">Meal Genius</p>
-                    <p class="font-hero text-2xl font-bold">Our Story</p>
-                    <p class="font-menu text-sm my-2">Welcome to our meal planner website! We're passionate about
-                        simplifying your culinary journey. Discover personalized meal plans, delectable recipes, and
-                        smart grocery lists tailored to your preferences. Let's savor the joy of cooking together!</p>
-                    <p class="font-brand text-[1.125rem] text-gray-600 xl:mt-14 lg:my-10"><a href="/">Know more about
-                            us-></a>
-                    </p>
-                </div>
-            </div>
-            <!-- AboutUs-Section Ends  -->
+                <!-- Hero-Section Ends -->
+            </main>
 
 
         </div>
 
-
-        <!-- <div class="bg-[#161614] text-white h-[70%] w-[80%]"> -->
-        <!-- SignUp-Section Starts -->
-        <!-- <div class="container flex flex-row w-[100%] h-full items-center">
-                <div class="w-[40%] h-full bg-cover bg-center relative">
-                    <img src="static/img/bg7.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="w-[60%] h-full flex flex-col justify-center items-center gap-6">
-                    <p class="font-hero text-3xl text-white">Register Now</p>
-                    <input type="text" placeholder="Enter your name" class="signUp-input">
-                    <input type="text" placeholder="Enter your phone" class="signUp-input">
-                    <input type="text" placeholder="Enter your age" class="signUp-input">
-                    <input type="text" placeholder="Enter your weight" class="signUp-input">
-                    <button class="rounded-none w-[20%] py-2 px-4 border-2 mt-4 border-gray-300 font-menu"><a
-                            href="/">Submit</a></button>
-                </div>
-            </div> -->
-        <!-- SignUp-Section Ends -->
-        <!-- </div> -->
     </div>
 
-    <script src="static/script.js"></script>
 </body>
 
 </html>
