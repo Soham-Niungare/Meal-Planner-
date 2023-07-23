@@ -11,37 +11,58 @@
     @apply w-[0em];
 }
 
-/* Navbar Design */
-/* .nav-menu-items-li {
-    @apply text-[#f5f5dc] list-none text-lg;
-}
-
-.nav-menu-items-a {
-    @apply px-[18px] py-[3px] bg-[#161614] text-white block rounded-[20px] md: px-[12px];
-} */
-
-.reveal {
-    position: relative;
-    left: -150px;
-    /* Start off-screen to the left */
-    transform: translateX(-50%);
-    /* Center the element horizontally */
-    transition: all 2s ease;
-    opacity: 0;
-}
-
-.reveal.active {
-    left: 50%;
-    /* Move to the middle of the screen */
+/* Sign In section animation */
+.transition-sign-in {
     opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: Right;
 }
 
-a:hover {
+html.is-animating .transition-sign-in {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+html.is-leaving .transition-sign-in {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+/* Sign Up section animation */
+.transition-sign-up {
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-animating .transition-sign-up {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-sign-up {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+/* About us section animation */
+.transition-about-us {
+    transition: 500ms;
+    transform: translateY(0);
+}
+
+html.is-animating .transition-about-us {
+    transform: translateY(100%);
+}
+
+#navbar ul a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
 /* Sign-Up page design */
 .signUp-input {
-    @apply p-6 h-6 rounded-2xl w-[60%] text-center font-menu;
+    @apply p-5 h-6 rounded-2xl w-[60%] text-center font-menu;
 }
