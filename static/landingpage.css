@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the scrollbar */
+.overflow-x-scroll::-webkit-scrollbar {
+    @apply w-[0em];
+}
+
+.overflow-y-scroll::-webkit-scrollbar {
+    @apply w-[0em];
+}
+
+/* Navbar Design */
+/* .nav-menu-items-li {
+    @apply text-[#f5f5dc] list-none text-lg;
+}
+
+.nav-menu-items-a {
+    @apply px-[18px] py-[3px] bg-[#161614] text-white block rounded-[20px] md: px-[12px];
+} */
+
+.reveal {
+    position: relative;
+    left: -150px;
+    /* Start off-screen to the left */
+    transform: translateX(-50%);
+    /* Center the element horizontally */
+    transition: all 2s ease;
+    opacity: 0;
+}
+
+.reveal.active {
+    left: 50%;
+    /* Move to the middle of the screen */
+    opacity: 1;
+}
+
+a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Sign-Up page design */
+.signUp-input {
+    @apply p-6 h-6 rounded-2xl w-[60%] text-center font-menu;
+}
