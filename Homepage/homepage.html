@@ -11,47 +11,49 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif+Khitan+Small+Script&family=Poppins&display=swap"
         rel="stylesheet">
-    <title>Meal Genius - Homepage</title>
+    <title>BodyBalanceBites - Homepage</title>
 </head>
 
 <body>
+
+
+
+    <!-- Navbar Section of Homepage -->
     <header class="bg-[#161614]">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
-                <div class="md:flex md:items-center md:gap-12 text-lg ff1">
-                    <a class="block text-white" href="/">
-                        Meal&nbsp;Genius
-                    </a>
+                <div class="md:flex md:items-center md:gap-12 ff1">
+                    <img src="static/img/logo1.png" alt="logo" class="block h-auto w-[30%]">
                 </div>
 
                 <div class="hidden md:block">
                     <nav aria-label="Global">
-                        <ul class="flex items-center gap-6 text-sm ff2 font-medium">
-                            <li>
+                        <ul class="flex items-center gap-6 text-sm ff2 font-medium nav-menu">
+                            <li class="nav-items">
                                 <a class="text-white transition hover:text-gray-500/75" href="#home">
                                     Home
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="nav-items">
                                 <a class="text-white transition hover:text-gray-500/75" href="#weightLoss">
                                     Weight Loss
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="nav-items">
                                 <a class="text-white transition hover:text-gray-500/75" href="#weightGain">
                                     Weight Gain
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="nav-items">
                                 <a class="text-white transition hover:text-gray-500/75" href="#blog">
                                     Blog
                                 </a>
                             </li>
 
-                            <li>
+                            <li class="nav-items">
                                 <a class="text-white transition hover:text-gray-500/75" href="#footer">
                                     Contact
                                 </a>
@@ -59,14 +61,10 @@
                         </ul>
                     </nav>
                 </div>
-
-                <div class="block md:hidden">
-                    <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
         </div>
@@ -74,7 +72,7 @@
 
 
 
-
+    <!-- Hero Section of Homepage -->
     <section id="home" class="relative bg-[url('static/img/img1.jpg')] bg-cover bg-center bg-no-repeat">
         <div
             class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l">
@@ -91,8 +89,9 @@
                 </h1>
 
                 <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-                    Discover a world of delectable recipes tailored to your dietary preferences and health goals, making
-                    meal planning a delightful journey.
+                    Meal Genius creates personalized meal plans based on your food preferences, medical record and work
+                    schedule. Reach your diet and nutritional goals with our weekly meal plans, grocery lists and more.
+                    Create your meal plan right here in seconds.
                 </p>
 
                 <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
@@ -102,7 +101,7 @@
                     </a>
 
                     <a href="#weightGain"
-                        class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#161614] shadow focus:outline-none focus:ring active:text-rose-500 sm:w-auto ff2">
+                        class="block w-full bg-white text-[#161614] rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring active:text-rose-500 sm:w-auto ff2">
                         Weight Gain
                     </a>
                 </div>
@@ -110,6 +109,82 @@
         </div>
     </section>
 
+
+
+    <!-- Form Section of Homepage -->
+    <section class="bg-white">
+        <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+            <aside class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+                <img alt="Pattern"
+                    src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    class="absolute inset-0 h-full w-full object-cover" />
+            </aside>
+
+            <main
+                class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+                <div class="max-w-xl lg:max-w-3xl">
+
+                    <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl ff3">
+                        BMI Calculator
+                    </h1>
+
+                    <p class="mt-4 leading-relaxed text-gray-500">
+                        Don't wait any longer – knowing your BMI is the first step towards a better lifestyle. Start
+                        your health journey now and gain valuable insights into your health.
+                    </p>
+
+                    <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+
+
+                        <div class="col-span-6">
+                            <label for="height" class="block text-sm font-medium text-gray-700">
+                                Height in CM:
+                            </label>
+
+                            <input type="email" id="height" name="height"
+                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none" /><br>
+                            <span id="height_error"></span>
+                        </div>
+
+                        <div class="col-span-6">
+                            <label for="weight" class="block text-sm font-medium text-gray-700">
+                                Weight in KG:
+                            </label>
+
+                            <input type="text" id="weight" name="weight"
+                                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none" /><br>
+                            <span id="weight_error"></span>
+                        </div>
+
+
+                        <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+                            <button id="BMIbtn"
+                                class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                                Calculate
+                            </button>
+                        </div>
+
+                        <div id="BMIoutput" class="col-span-6 sm:col-span-3 ff3 hidden">
+                            <label for="age" class="block text-sm font-medium text-gray-700">
+                                <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                                    Here's your BMI
+                                </h1>
+                            </label>
+
+                            <div id="output"
+                                class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 align-top sm:text-sm sm:font-md text-center border-2 border-black">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </main>
+        </div>
+    </section>
+
+
+
+    <!-- Weight-Loss Section of Homepage -->
     <section id="weightLoss" class="bg-[#262424]">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
@@ -180,176 +255,172 @@
     </section>
 
 
-
-
+    <!-- Weight-Gain Section of Homepage -->
     <section id="weightGain">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
-                <div class="grid p-6 bg-[#7F411C] rounded place-content-center sm:p-8">
-                    <div class="max-w-md mx-auto text-center lg:text-left">
-                        <header>
-                            <h2 class="text-xl font-bold text-[#f5caa7] sm:text-3xl ff3">Welcome to our Weight Gain
-                                Section!
-                            </h2>
+            <div class="lg:col-span-2 lg:py-8">
+                <ul class="grid grid-cols-2 gap-4">
+                    <li>
+                        <div class="grid p-6 bg-[#7F411C] rounded place-content-center sm:p-8  fixedHeight">
+                            <div class="max-w-md mx-auto text-center lg:text-left">
+                                <header>
+                                    <h2 class="text-xl font-bold text-[#f5caa7] sm:text-3xl ff3">Welcome to our
+                                        Weight Gain
+                                        Section!
+                                    </h2>
 
-                            <p class="mt-4 text-[#fdfdfd] font-semibold">
-                                Here, we've assembled a collection of carefully curated resources and recipes to support
-                                your journey towards a healthier you. Our nutrient-rich recipes are not only delicious
-                                but also designed to aid in weight loss, ensuring you get the essential nutrients your
-                                body needs.
-                            </p>
-                        </header>
+                                    <p class="mt-4 text-[#fdfdfd] font-semibold">
+                                        Here, we've assembled a collection of carefully curated resources and
+                                        recipes to support
+                                        your journey towards a healthier you. Our nutrient-rich recipes are not only
+                                        delicious
+                                        but also designed to aid in weight loss, ensuring you get the essential
+                                        nutrients your
+                                        body needs.
+                                    </p>
+                                </header>
 
-                        <button
-                            class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-[#161614] rounded hover:shadow focus:outline-none focus:ring">
-                            Show All
-                        </button>
-                    </div>
-                </div>
+                                <button
+                                    class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-[#161614] rounded hover:shadow focus:outline-none focus:ring">
+                                    Show All
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pb-2">
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                <div class="lg:col-span-2 lg:py-8">
-                    <ul class="grid grid-cols-2 gap-4">
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-1"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Grilled Lemon Herb Chicken with Zucchini Noodles
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Grilled Lemon Herb Chicken with Zucchini Noodles
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Indulge in a mouthwatering weight loss dish
+                                    that doesn't skimp on flavor – our Grilled Lemon Herb Chicken with Zucchini
+                                    Noodles! </p>
+                            </div>
+                        </a>
+                    </li>
 
-                                    <p class="mt-1 text-sm text-[#262424]">Indulge in a mouthwatering weight loss dish
-                                        that doesn't skimp on flavor – our Grilled Lemon Herb Chicken with Zucchini
-                                        Noodles! </p>
-                                </div>
-                            </a>
-                        </li>
+                    <li class="pb-2">
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                                    <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                                    <p class="mt-1 text-sm text-[#fdfdfd]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                                    <p class="mt-1 text-sm text-[#fdfdfd]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                                    <p class="mt-1 text-sm text-[#fdfdfd]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block group">
+                            <img src="static/img/img2.jpg" class="object-cover w-full rounded aspect-square" />
 
-                                    <p class="mt-1 text-sm text-[#fdfdfd]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block group">
-                                <img src="static/img/img2.jpg" alt="card-2"
-                                    class="object-cover w-full rounded aspect-square" />
+                            <div class="mt-3">
+                                <h3
+                                    class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
+                                    Mediterranean Quinoa Salad with Chickpeas and Feta
+                                </h3>
 
-                                <div class="mt-3">
-                                    <h3
-                                        class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4">
-                                        Mediterranean Quinoa Salad with Chickpeas and Feta
-                                    </h3>
-
-                                    <p class="mt-1 text-sm text-[#fdfdfd]">Mediterranean Quinoa Salad combines
-                                        protein-rich quinoa, hearty chickpeas, and creamy feta
-                                        cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
-                                        cucumbers, and bell peppers.</p>
-                                </div>
-                            </a>
-                        </li> -->
-                    </ul>
-                </div>
+                                <p class="mt-1 text-sm text-[#262424]">Mediterranean Quinoa Salad combines
+                                    protein-rich quinoa, hearty chickpeas, and creamy feta
+                                    cheese with an array of fresh Mediterranean vegetables like cherry tomatoes,
+                                    cucumbers, and bell peppers.</p>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
             </div>
         </div>
     </section>
 
-
+    <!-- Blog Section of Homepage -->
     <section id="blog" class="pb-8 border-t border-gray-300 pt-4">
         <p class="flex justify-center mb-8 text-3xl font-semibold text-[#161614] ff3">Blog</p>
+
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch px-16">
-            <!-- link: https://www.mynetdiary.com/what-causes-sugar-cravings.html -->
+
             <article
                 class="rounded-lg border border-gray-100 p-4 shadow-sm transition hover:shadow-lg sm:p-6  bg-white">
 
-                <a href="#">
+                <a href="https://www.mynetdiary.com/what-causes-sugar-cravings.html">
                     <h3 class="mt-0.5 text-lg font-medium text-gray-900 font-medium">
                         Learn what to do when sugar cravings hit and what causes them in the first place
                     </h3>
@@ -401,19 +472,7 @@
 
 
             <article class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
-                <!-- <span class="inline-block rounded bg-blue-600 p-2 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path
-                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                    </svg>
-                </span> -->
-
-                <a href="#">
-                    <!-- link: https://www.mynetdiary.com/healthy-ways-to-deal-with-stress.html -->
+                <a href="https://www.mynetdiary.com/healthy-ways-to-deal-with-stress.html">
                     <h3 class="mt-0.5 text-lg font-medium text-gray-900">
                         Healthy ways to deal with stress so it doesn’t sabotage your weight loss
                     </h3>
@@ -441,7 +500,7 @@
     </section>
 
 
-
+    <!-- Footer Section of Homepage -->
     <footer id="footer" class="bg-[#2C5C4A]">
         <div class="mx-auto max-w-screen-xl px-4 pb-6 sm:px-6 lg:px-8">
             <div class="mt-2 grid grid-cols-1 gap-8 pt-8 md:grid-cols-4 lg:grid-cols-6">
@@ -450,13 +509,13 @@
 
                     <ul class="mt-8 space-y-4 text-sm">
                         <li>
-                            <a class="text-[#E9E3B4] transition hover:text-gray-700/75" href="/">
+                            <a class="text-[#E9E3B4] transition hover:text-gray-700/75" href="#weightGain">
                                 Weight Gain
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-[#E9E3B4] transition hover:text-gray-700/75" href="/">
+                            <a class="text-[#E9E3B4] transition hover:text-gray-700/75" href="#weightLoss">
                                 Weight Loss
                             </a>
                         </li>
@@ -527,15 +586,15 @@
                 <ul class="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">
 
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank"
-                            class="text-teal-700 transition hover:text-teal-700/75">
+                        <a href="https://www.facebook.com/profile.php?id=100095331546940&mibextid=ZbWKwL"
+                            rel="noreferrer" target="_blank" class="text-teal-700 transition hover:text-teal-700/75">
                             <span class="sr-only">Facebook</span>
                             <img src="static/icons/facebook.png" class="h-6 w-6">
                         </a>
                     </li>
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank"
-                            class="text-teal-700 transition hover:text-teal-700/75">
+                        <a href=" https://www.instagram.com/invites/contact/?i=8xy91cxsvm3x&utm_content=ry77mwt"
+                            rel="noreferrer" target="_blank" class="text-teal-700 transition hover:text-teal-700/75">
                             <span class="sr-only">Instagram</span>
                             <img src="static/icons/instagram.png" class="h-6 w-6">
                         </a>
@@ -548,7 +607,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank"
+                        <a href="http://github.com/Soham-Niungare/Meal-Planner-" rel="noreferrer" target="_blank"
                             class="text-teal-700 transition hover:text-teal-700/75">
                             <span class="sr-only">GitHub</span>
                             <img src="static/icons/github.png" class="h-6 w-6">
