@@ -11,45 +11,9 @@
     @apply w-[0em];
 }
 
-/* Sign In section animation */
-.transition-sign-in {
-    opacity: 1;
-    transition: 500ms;
-    transform: translateX(0);
-    transform-origin: Right;
-}
-
-html.is-animating .transition-sign-in {
-    opacity: 1;
-    transform: translateX(-100%);
-}
-
-html.is-leaving .transition-sign-in {
-    opacity: 0;
-    transform: translateX(0);
-}
-
-/* Sign Up section animation */
-.transition-sign-up {
-    opacity: 1;
-    transition: 500ms;
-    transform: translateX(0);
-    transform-origin: left;
-}
-
-html.is-animating .transition-sign-up {
-    opacity: 1;
-    transform: translateX(100%);
-}
-
-html.is-leaving .transition-sign-up {
-    opacity: 0;
-    transform: translateX(0);
-}
-
 /* About us section animation */
 .transition-about-us {
-    transition: 500ms;
+    transition: 300ms;
     transform: translateY(0);
 }
 
@@ -60,9 +24,4 @@ html.is-animating .transition-about-us {
 #navbar ul a:hover {
     background-color: #ffffff;
     color: #000000;
-}
-
-/* Sign-Up page design */
-.signUp-input {
-    @apply p-5 h-6 rounded-2xl w-[60%] text-center font-menu;
 }
